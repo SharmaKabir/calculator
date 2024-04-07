@@ -1,0 +1,142 @@
+
+    /*background: linear-gradient(to right, #00bf8f, #001510);*/ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /*background: linear-gradient(to right, #232526, #414345); */ /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+
+html{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    min-height: 100vh;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    color:rgb(0, 0, 0);
+    background:  linear-gradient(to right, #232526, #414345);;
+
+}
+
+.calculator{
+    /*display: flex;*/
+    background:rgb(65, 64, 64);
+    min-width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 5px 30px -5px rgba(0,0,0,0.6) ;
+}
+
+.calculator-display{
+    margin: 0;
+    background:black;
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius:10px 10px 0 0;
+    
+}
+.calculator-display h1{
+    margin:0;
+    padding:25px;
+    font-size: 45px;
+    font-family: 'Lucia Console',sans-serif;
+    overflow-x: auto;
+
+
+ /* width */
+
+}
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  } 
+  
+.calculator-buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:10px;
+    padding:10px;
+    
+}
+
+
+button{
+    min-height: 50px;
+    font-size: 20px;
+    font-weight: 100;
+    font-family:Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgb(172, 171, 171);
+}
+
+
+
+
+
+button:hover{
+    filter:brightness(110%);
+}
+
+
+button:active{
+    transform:translateY(1px);
+    transform: scale(0.98);
+}
+
+button:focus{
+    outline:none;
+}
+
+
+
+
+.operator{
+    background-color: rgb(110, 109, 107);
+    color:white;
+    font-size: 30px;
+}
+
+.clear{
+background-color: rgb(185, 12, 12);
+color: white;
+}
+
+
+
+
+
+  .equal-sign{
+    grid-column: -2;
+    grid-row:2/span 4;
+    background-color: rgb(12, 185, 79);
+  }
+
+.clear:hover{
+    filter:brightness(90%);
+}
+
+
+@media screen  and (max-width:600px){
+    .calculator{
+        width:95%;
+    }
+    
+}
